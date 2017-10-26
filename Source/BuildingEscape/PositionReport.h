@@ -2,28 +2,25 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
-#include "WeirdSphere.generated.h"
+#include "Components/ActorComponent.h"
+#include "PositionReport.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class SECTION2_API UWeirdSphere : public USceneComponent
+class BUILDINGESCAPE_API UPositionReport : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UWeirdSphere();
+	UPositionReport();
 
-protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
-
-public:	
+	
 	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void TickComponent( float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction ) override;
 
-		
+	
 	
 };
